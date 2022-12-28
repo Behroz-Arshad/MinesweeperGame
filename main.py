@@ -36,10 +36,19 @@ top_frame.place(x=0, y=0)
 left_frame.place(x=0, y=utils.height_percent(25))
 center_frame.place(x=utils.width_percent(25), y=utils.height_percent(25))
 
+for x in range(settings.GRID_SIZE):
+    for y in range(settings.GRID_SIZE):
+        c1 = Cell(x, y)
+        c1.create_btn_object(center_frame)
+        c1.cell_btn_obj.grid(column=y, row=x)
 
-c1 = Cell()
-c1.create_btn_object(center_frame)
-c1.cell_btn_obj.place(x=0, y=0)
+Cell.randomize_mines()
+for i in Cell.all_elements_list:
+    print(i.is_mine)
 
+
+# c2 = Cell()
+# c2.create_btn_object(center_frame)
+# c2.cell_btn_obj.grid(column=0, row=1)
 # Run the window
 root.mainloop()
