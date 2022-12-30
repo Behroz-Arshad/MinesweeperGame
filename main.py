@@ -47,6 +47,8 @@ Cell.randomize_mines()
 for i in Cell.all_elements_list:
     print(i.is_mine)
 
+Cell.create_label_object(left_frame)
+Cell.cell_count_label_obj.place(x=0, y=0)
 
 # c2 = Cell()
 # c2.create_btn_object(center_frame)
