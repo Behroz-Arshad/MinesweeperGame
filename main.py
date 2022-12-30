@@ -5,6 +5,7 @@ from cell import Cell
 
 # Overriding the settings of window
 root = Tk()
+root.configure(bg='black')
 root.geometry(f'{settings.WIDTH}x{settings.HEIGHT}')
 root.title(settings.title)
 root.resizable(False, False)
